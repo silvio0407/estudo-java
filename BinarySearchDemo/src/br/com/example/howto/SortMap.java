@@ -37,6 +37,5 @@ public class SortMap {
 		Map<String, Integer> result = unsort.entrySet().stream().sorted(Map.Entry.comparingByKey()).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 		System.out.println(result);
 		
-		
 	}
 }
