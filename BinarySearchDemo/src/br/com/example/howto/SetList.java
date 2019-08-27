@@ -1,6 +1,7 @@
 package br.com.example.howto;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -23,6 +24,8 @@ public class SetList {
 		str2.add("b");
 		str2.add("c");
 		
+		str.stream().flatMap(l1 -> str.stream().filter(l2-> l1.equals(l2))).forEach(System.out::print);
+		
 		List<Integer> str3 = new ArrayList<>();
 		
 		str3.add(1);
@@ -33,6 +36,8 @@ public class SetList {
 		str4.add(1);
 		str4.add(2);
 		str4.add(3);
+		
+		str3.stream().max(Comparator.comparing(Integer::valueOf));
 		
 		setLits.add(str);
 		setLits.add(str2);
